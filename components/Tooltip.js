@@ -21,7 +21,7 @@ export default function Tooltip({ children, tooltipText }) {
         ref={tipRef}
       >
         <div
-          className="absolute w-3 h-3 -rotate-45 bg-darkbg dark:bg-white"
+          className="absolute w-3 h-3 transition-all duration-150 -rotate-45 bg-darkbg dark:bg-white"
           style={{ right: "-6px", transform: "rotate(-45deg)" }}
         />
         {tooltipText}

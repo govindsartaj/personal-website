@@ -20,8 +20,6 @@ export default function Navbar({ setDarkMode, darkMode }) {
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <Link href='/'><a className="px-3 py-2 text-sm font-medium rounded-md dark:text-white hover:bg-gray-300 hover:text-white">Home</a></Link>
 
-                <Link href='/about'><a className="px-3 py-2 text-sm font-medium rounded-md dark:text-white hover:bg-gray-300 hover:text-white">About</a></Link>
-
                 <Link href='/projects'><a className="px-3 py-2 text-sm font-medium rounded-md dark:text-white hover:bg-gray-300 hover:text-white">Projects</a></Link>
 
                 <Link href='/contact'><a className="px-3 py-2 text-sm font-medium rounded-md dark:text-white hover:bg-gray-300 hover:text-white">Contact</a></Link>
@@ -62,24 +60,22 @@ export default function Navbar({ setDarkMode, darkMode }) {
       </div>
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-      <div className={`md:hidden ${!mobileMenuOpen ? 'hidden' : 'block'}`} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div className={`mx-auto md:hidden shadow-lg rounded-b-xl ${!mobileMenuOpen ? 'hidden' : 'block'}`} id="mobile-menu">
+        <div className="px-2 pt-2 pb-3 space-y-1 border-l border-r border-gray-700 sm:px-3">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          <Link href='/'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Home</a></Link>
+        <Link href='/'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Home</a></Link>
 
-          <Link href='/about'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">About</a></Link>
+        <Link href='/projects'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Projects</a></Link>
 
-          <Link href='/projects'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Projects</a></Link>
+        <Link href='/contact'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Contact</a></Link>
 
-          <Link href='/contact'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Contact</a></Link>
-
-          <Link href='/blog'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Blog</a></Link>
-        </div>
-        <div className="pt-4 pb-3 text-center border-t border-b border-gray-700 rounded-b-xl dark:text-white">
-          <DarkModeToggle setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Link href='/blog'><a onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium rounded-md dark:text-white hover:bg-gray-700 hover:text-white">Blog</a></Link>
+      </div>
+      <div className="pt-4 pb-3 text-center border-t border-b border-l border-r border-gray-700 rounded-b-xl dark:text-white">
+        <DarkModeToggle setDarkMode={setDarkMode} darkMode={darkMode} />
           Built with Next.js and TailwindCSS. <br /> All rights reserved © 2021
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }

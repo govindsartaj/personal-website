@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .h-screen{
-  height:calc(100vh - 4rem)!important;
-} */
+#mobile-menu {
+  width: 99% !important;
+}
