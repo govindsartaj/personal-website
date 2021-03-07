@@ -13,10 +13,10 @@ export default function Navbar({ setDarkMode, darkMode }) {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href='/'><a className="text-xl dark:text-white text-gray-900 font-semibold">Govind Brahmanyapura</a></Link>
+              <Link href='/'><a className="text-xl dark:text-white text-gray-900 font-thin"><code>{'<Govind/>'}</code></a></Link>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="ml-10 flex items-baseline space-x-4 font-light">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                 <Link href='/'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a></Link>
 
@@ -46,7 +46,7 @@ export default function Navbar({ setDarkMode, darkMode }) {
               Menu open: "hidden", Menu closed: "block"
             --> */}
               <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               {/* <!--
               Heroicon name: outline/x
@@ -54,7 +54,7 @@ export default function Navbar({ setDarkMode, darkMode }) {
               Menu open: "block", Menu closed: "hidden"
             --> */}
               <svg className="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -65,17 +65,17 @@ export default function Navbar({ setDarkMode, darkMode }) {
       <div className={`md:hidden ${!mobileMenuOpen ? 'hidden' : 'block'}`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-          <a href="#" className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <Link href='/'><a onClick={() => setMobileMenuOpen(false)} className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a></Link>
 
-          <a href="#" className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+          <Link href='/about'><a onClick={() => setMobileMenuOpen(false)} className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a></Link>
 
-          <a href="#" className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+          <Link href='/projects'><a onClick={() => setMobileMenuOpen(false)} className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a></Link>
 
-          <a href="#" className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          <Link href='/contact'><a onClick={() => setMobileMenuOpen(false)} className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a></Link>
 
-          <a href="#" className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+          <Link href='/blog'><a onClick={() => setMobileMenuOpen(false)} className="dark:text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a></Link>
         </div>
-        <div className="pt-4 pb-3 border-t border-gray-700 dark:text-white text-center">
+        <div className="pt-4 pb-3 border-t border-b rounded-b-xl border-gray-700 dark:text-white text-center">
           <DarkModeToggle setDarkMode={setDarkMode} darkMode={darkMode} />
           Built with Next.js and TailwindCSS. <br /> All rights reserved © 2021
         </div>

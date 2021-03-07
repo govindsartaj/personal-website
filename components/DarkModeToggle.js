@@ -2,6 +2,7 @@
 
 export default function DarkModeToggle({ setDarkMode, darkMode }) {
 
+  console.log("init: " + darkMode);
 
   return (
     <div className="w-full text-center">
@@ -9,7 +10,7 @@ export default function DarkModeToggle({ setDarkMode, darkMode }) {
       <div className="dark:text-white text-gray-900 inline-flex">
         <div className="text-xs dark:text-white text-gray-900 mt-2 mr-2">dark mode</div>
         <button className="focus:outline-none" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? (
+          {!darkMode ? (
             <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
                 strokeLinecap="round"
