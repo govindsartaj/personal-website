@@ -1,7 +1,8 @@
-import Head from 'next/head'
 
-export default function Home() {
+export default function Home({ darkMode }) {
   return (
-    <h1>Howdy</h1>
+    <div className="dark:bg-darkbg h-screen">
+    
+    </div>
   )
 }
