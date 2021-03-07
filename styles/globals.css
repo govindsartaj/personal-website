@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.h-screen{
+/* .h-screen{
   height:calc(100vh - 4rem)!important;
-}
+} */
