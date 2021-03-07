@@ -1,5 +1,6 @@
 import DarkModeToggle from "./DarkModeToggle"
 import { useState } from 'react'
+import Link from 'next/link'
 
 
 export default function Navbar({ setDarkMode, darkMode }) {
@@ -12,20 +13,20 @@ export default function Navbar({ setDarkMode, darkMode }) {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="text-xl dark:text-white text-gray-900 font-semibold">Govind Brahmanyapura</div>
+              <Link href='/'><a className="text-xl dark:text-white text-gray-900 font-semibold">Govind Brahmanyapura</a></Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                <a href="#" className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <Link href='/'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a></Link>
 
-                <a href="#" className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <Link href='/about'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a></Link>
 
-                <a href="#" className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                <Link href='/projects'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a></Link>
 
-                <a href="#" className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                <Link href='/contact'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a></Link>
 
-                <a href="#" className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                <Link href='/blog'><a className="dark:text-white hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a></Link>
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function Navbar({ setDarkMode, darkMode }) {
         </div>
         <div className="pt-4 pb-3 border-t border-gray-700 dark:text-white text-center">
           <DarkModeToggle setDarkMode={setDarkMode} darkMode={darkMode} />
-          All rights reserved.
+          Built with Next.js and TailwindCSS. <br /> All rights reserved © 2021
         </div>
       </div>
     </nav>
