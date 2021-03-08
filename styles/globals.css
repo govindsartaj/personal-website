@@ -6,6 +6,10 @@
   width: 99% !important;
 }
 
+.h-screen {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
 button:focus,
 a:focus {
   outline: none;
