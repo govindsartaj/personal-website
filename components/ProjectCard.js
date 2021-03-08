@@ -10,13 +10,13 @@ export default function ProjectCard({ src, title, body, tags, link }) {
         alt="Mountain"
       ></img>
       <div className="px-6 py-2 overflow-hidden min-h-36">
-        <div className="mb-2 text-xl font-bold">{title}</div>
-        <p className="text-base dark:text-white">{body}</p>
+        <div className="mb-2 text-xl font-semibold">{title}</div>
+        <p className="text-base font-thin dark:text-white">{body}</p>
       </div>
       <div className="px-6 pt-4 pb-2">
         {tags
           ? tags.map((tag) => (
-              <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">
+              <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-thin text-gray-700 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-white">
                 {tag}
               </span>
             ))
