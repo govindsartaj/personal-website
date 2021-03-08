@@ -5,3 +5,12 @@
 #mobile-menu {
   width: 99% !important;
 }
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+html {
+  overflow-y: scroll;
+}

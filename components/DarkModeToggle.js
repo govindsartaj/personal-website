@@ -9,7 +9,7 @@ export default function DarkModeToggle({ setDarkMode, darkMode }) {
 
       <div className="inline-flex text-gray-900 dark:text-white">
         <Tooltip tooltipText={darkMode ? "Light mode" : "Dark mode"} >
-          <button className="focus:outline-none" onClick={() => setDarkMode(!darkMode)}>
+          <button className="transition duration-100 ease-in-out transform focus:outline-none hover:scale-110" onClick={() => setDarkMode(!darkMode)}>
             {!darkMode ? (
               <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
