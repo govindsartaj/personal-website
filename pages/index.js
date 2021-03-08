@@ -40,6 +40,14 @@ export default function Home({ darkMode }) {
           </a>
           ,
           <a
+            href="https://expressjs.com/"
+            className="my-6 text-3xl font-bold text-center dark:text-white"
+          >
+            {" "}
+            Express
+          </a>
+          ,
+          <a
             href="https://nextjs.org"
             className="my-6 text-3xl font-bold text-center dark:text-white"
           >
