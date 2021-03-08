@@ -6,7 +6,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
 
-  if (document && window) {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
